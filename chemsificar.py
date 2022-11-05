@@ -1,5 +1,5 @@
 #Chemsificador por Francisco Blanco Lopez
-
+from limpiar import LimpiarCadena as Limpiar
 #Convierte el input en un array
 def Convertirarray(x):
   return [c for c in x]
@@ -40,27 +40,13 @@ def ListaTexto(final):
   out= "".join([str(item) for item in final])
   print("Texto chemsificado:",out, sep="\n")
   return out
-#funcion que elimina duplicados
-def LimpiarCadena(cadenaResult):
-  #variables
-  e=cadenaResult[1]
-  contadorDel=0
-  cadenaAsign= cadenaResult[0]
-  
-  for i in range(len(cadenaAsign)-1):
-    if cadenaAsign[i]==cadenaAsign[i+1]:
-      cadenaAsign.pop(i)
-      contadorDel+=1
-      if contadorDel == e:
-        #detiene el ciclo para evitar errores
-        break
-  return cadenaAsign
+
   
 #Llamado de funciones aqui
 def main(cadena):
   #retorna el resultado para ser usado en la GUI
   ola=Comparacion(Convertirarray(cadena)) #ola es una tupla de dos valores accesar con indices 0,1
-  return ListaTexto(LimpiarCadena(ola))
+  return ListaTexto(Limpiar(ola))
  #Ejecuta funcion principal, no borrar
 if __name__=="__main__":
   #cadena= input("Ingresa el texto a chemsificar: ") + " "
