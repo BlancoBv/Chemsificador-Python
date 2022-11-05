@@ -13,3 +13,7 @@ def LimpiarCadena(cadenaResult):
         #detiene el ciclo para evitar errores
         break
   return cadenaAsign
+
+if __name__=="__main__":
+  #cadena= input("Ingresa el texto a chemsificar: ") + " "
+  LimpiarCadena()

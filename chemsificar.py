@@ -14,9 +14,9 @@ def ListaTexto(final):
 
 #Llamado de funciones aqui
 def main(cadena):
-  #retorna el resultado para ser usado en la GUI
   ola=Comparacion(Convertirarray(cadena)) #ola es una tupla de dos valores accesar con indices 0,1
-  return ListaTexto(Limpiar(ola))
+  return ListaTexto(Limpiar(ola)) #retorna el resultado para ser usado en la GUI
+
  #Ejecuta funcion principal, no borrar
 if __name__=="__main__":
   #cadena= input("Ingresa el texto a chemsificar: ") + " "

@@ -28,3 +28,6 @@ def Comparacion(texto):
       i+=1
   print("cadena resultante:",nuevaCadena)
   return nuevaCadena, E()
+if __name__=="__main__":
+  #cadena= input("Ingresa el texto a chemsificar: ") + " "
+  Comparacion()
