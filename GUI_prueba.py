@@ -15,13 +15,12 @@ def VentanaPrincipal():
   
   def Copiar(): #copia el texto del resultado
     pyperclip.copy(TextoCaja())
-    
 
   #contenedor principal
   ventana= tk.Tk()
   ventana. geometry("300x300")
   ventana.title("Chemsificador")
-  cliptext = ventana.clipboard_get()
+  
   #contenedo de texto de entrada
   cajaTexto= tk.Entry(ventana, font="Consolas")
   cajaTexto.pack()
@@ -34,9 +33,7 @@ def VentanaPrincipal():
   #boton para copiar texto al portapapeles
   botonCopiar= tk.Button(ventana,text="Copiar al portapapeles", command=Copiar)
   botonCopiar.pack()
-  
-  label=tk.Label(ventana, text=cliptext)
-  label.pack()
+
   return ventana
 
 def main():

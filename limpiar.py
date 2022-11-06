@@ -15,5 +15,4 @@ def LimpiarCadena(cadenaResult):
   return cadenaAsign
 
 if __name__=="__main__":
-  #cadena= input("Ingresa el texto a chemsificar: ") + " "
   LimpiarCadena()
