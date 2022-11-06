@@ -2,6 +2,7 @@
 def Comparacion(texto):
   #variables
   vocales=["a","e","i", "o", "u" ]
+  excepciones=["m","n","r"]
   letraAnterior= ""
   nuevaCadena=[]
   i= 0
@@ -16,9 +17,13 @@ def Comparacion(texto):
   while i <len(texto)-1:
     letraAnterior= texto[i]
     if letraAnterior in vocales:
-      nuevaCadena.append(letraAnterior)
-      nuevaCadena.append("m")
-      nuevaCadena.append(texto[i+1])
+      if texto[i+1] in vocales or texto[i+1] in excepciones:
+        nuevaCadena.append(letraAnterior)
+        nuevaCadena.append(texto[i+1])
+      else:
+        nuevaCadena.append(letraAnterior)
+        nuevaCadena.append("m")
+        nuevaCadena.append(texto[i+1])
       #i+=2
       i+=1
     else:
@@ -28,6 +33,7 @@ def Comparacion(texto):
       i+=1
   print("cadena resultante:",nuevaCadena)
   return nuevaCadena, E()
+
 if __name__=="__main__":
   #cadena= input("Ingresa el texto a chemsificar: ") + " "
   Comparacion()
